@@ -1,0 +1,23 @@
+Plugin 'lepture/vim-jinja'
+Plugin 'prettier/vim-prettier'
+Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'maksimr/vim-jsbeautify'
+set background=dark    " Setting dark mode
+set termguicolors
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+colorscheme PaperColor
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
+let g:python_host_prog='/usr/local/bin/python3.6'
+let g:python3_host_prog='/usr/local/bin/python3.6'
+"enable keyboard shortcuts
+let g:tern_map_keys=1
+"show argument hints
+let g:tern_show_argument_hints='on_hold'
+"to prevent clash with youcompleteme, change snippet trigger
+imap <C-J> <esc>a<Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
